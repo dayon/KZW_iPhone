@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C6C28EB4-05B2-4149-ACBF-B3F471F7853B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KZW_iPhoneNew</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>64FD9FA5B241803DF19A70109F82DCB907A5A9A5</key>
+		<string>https://github.com/kezhanwang/KZW_iPhoneNew.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KZW_iPhoneNew.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>64FD9FA5B241803DF19A70109F82DCB907A5A9A5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kezhanwang/KZW_iPhoneNew.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>64FD9FA5B241803DF19A70109F82DCB907A5A9A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>64FD9FA5B241803DF19A70109F82DCB907A5A9A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KZW_iPhoneNew</string>
+		</dict>
+	</array>
+</dict>
+</plist>

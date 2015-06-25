@@ -1,0 +1,106 @@
+//
+//  PrefixHeader.pch
+//  KZW_iPhone
+//
+//  Created by Oliver on 15/5/12.
+//  Copyright (c) 2015年 Oliver. All rights reserved.
+//
+
+#ifndef KZW_iPhone_PrefixHeader_pch
+#define KZW_iPhone_PrefixHeader_pch
+//#import "UIView+ZNHLayout.h"
+#import "Connect.h"
+#import "UIButton+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "AppDelegate.h"
+#import "CWStarRateView.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define WEBURL @"http://www.kezhanwang.cn"
+#define kUserDefaultsCookie @"kzuser"
+
+#define kCookieName @"b42e7_winduser"
+//Lesson List
+/**
+ url:"http://123.56.156.37:8888/app/appinfo/courselist?sort=order&p=&ps=2&wd=php"
+ sort: 排序方式,focus关注数,order报名数,不填默认
+ p: 可选,默认1,第几页,从1开始
+ ps: 可选,每页多少,默认10
+ */
+#define API_LESSON_LIST @"http://www.kezhanwang.cn/app/appinfo/courselist" //课程列表 ?sort=order&ps=2&wd=" //wd 接文本内容
+#define API_FILTER_LIST @"http://www.kezhanwang.cn/app/appinfo/filter"     //筛选列表:cate1id一级分类 cate2id二级分类 areaid区域分类
+
+#define API_LESSON_DETAIL @"http://www.kezhanwang.cn/app/appinfo/coursedetail?id=" //课程详细页 id 对应列表result id
+#define API_LESSON_ISFOCUS @"http://www.kezhanwang.cn/focus/do"  //post参数 oid=课程id  op=1关注 2取消关注  otype=2 表示关注的课程
+#define API_LESSON_FOCUSLIST @"http://www.kezhanwang.cn/app/appinfo/focus"  //关注列表
+#define API_REGISTER_URL @"http://www.kezhanwang.cn/app/appuser/Register"  //注册  参数是pw:密码  tel：手机号
+#define API_VERIFYTEL_URL @"http://www.kezhanwang.cn/app/appuser/uinfo"    //?tel=15212312321&tp=ckte" //result=-1可注册，result=1表示重复
+#define API_SENDSMS_URL @"http://www.kezhanwang.cn/app/appuser/code"       //?tp=sent&tel=15210096741
+#define API_FEEDBACK_URL @"http://www.kezhanwang.cn/app/appuser/AddAdvice" //?75b35_winduser=V2tUAgxSCQZRXgBUVABUB1JQAQYHUgwAAlYAWQEAVgEBUj0&msg=tt 返回结果code=0为正常，code=1 为错误， code=0时，result=1表示插入成功，result=0未插入
+#define API_USERINFO_MODIFY @"http://www.kezhanwang.cn/app/appuser/Update" //?name=&sex=1&75b35_winduser=  返回code = 5 是未登录，结果code=0为正常，code=3 参数为空， code=0时，result=1表示更新成功，result=0未更新
+#define API_ADRESSBOOK_UPLOAD @"http://www.kezhanwang.cn/appinfo/collectmobile"//mobiles
+
+
+#define API_SIGN_UP @"http://www.kezhanwang.cn/app/appuser/enroll" //我要报名
+//?name=lwl_0321&sid=1&tel=15210096723&cid=2
+//返回code = 5 是未登录，结果code=0为正常，code=3 参数错误， code=0时，result=0成功，result=1重复插入
+#define API_USER_CENTER @"http://www.kezhanwang.cn/app/appinfo/my" //个人中心
+
+#define API_LOAN_REQUEST @"http://www.kezhanwang.cn/loan/submit" //贷款申请 ?cid=1 http://123.56.156.37:8888/test/picsave
+#define API_LOAN_APPLY @"http://www.kezhanwang.cn/loan/apply" //贷款请求
+
+#define API_USER_LOANLIST @"http://www.kezhanwang.cn/app/appinfo/my" //贷款信息
+#define API_USER_UPLOADPIC @"http://bbs.kezhanwang.cn/uploadicon.php" //个人头像上传
+
+#define API_TANXING_XIEYI @"http://www.kezhanwang.cn/html/contract_h5/contract_tan.html"//贷款协议（弹性模式）
+
+#define API_TIEXI_XIEYI @"http://www.kezhanwang.cn/html/contract_h5/contract_tie.html" //贷款协议（贴息模式）
+
+#define API_PUSH_SERVER @"http://zinenet.jd-app.com/apns.php"//通知推送
+
+#define API_FOCUS_EVENT @"http://www.kezhanwang.cn/focus/do" //oid:操作对象 optype: 1 学习, 2 课程, 5 分析师  op: 1 关注, 2 取消关注
+
+
+#define API_ABOUT_US @"http://www.kezhanwang.cn/html/about/about.html" //
+
+#define API_SHARE_URL @"http://www.kezhanwang.cn/course/detail" //分享
+
+
+
+
+#define kOrderByFocus @"focus"  //关注度
+#define kOrderByScore @"score" //评分
+
+
+
+#define loadNextTip @"点击显示更多"
+#define loadingTip @"正在加载 . . ."
+/**
+ The color with alpha
+ */
+#define R_G_B_A_COLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+
+/**
+ The color with alpha
+ */
+#define NotificationAddObserver(TITLE, SELECTOR) [[NSNotificationCenter defaultCenter] addObserver:self selector:SELECTOR name:TITLE object:nil]
+#define NotificationRemoveObserver(id) [[NSNotificationCenter defaultCenter] removeObserver:id]
+#define NotificationPostNotify(TITLE,OBJ,PARAM) [[NSNotificationCenter defaultCenter] postNotificationName:TITLE object:OBJ userInfo:PARAM]
+
+
+
+#endif
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
